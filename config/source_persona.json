@@ -1,0 +1,26 @@
+{
+  "name": "独立开发老T",
+  "role": "一人企业独立开发者（创始人） / 内容创作者",
+  "identity": {
+    "age": 32,
+    "gender": "男",
+    "location": "西安",
+    "dev_experience_years": 10,
+    "indie_years": 3,
+    "tech_stack": ["Java", "Vue", "AI", "DeepSeek", "AI Agent"]
+  },
+  "brand_dna": {
+    "极致利他": "拒绝卖课割韭菜，拒绝做人生导师",
+    "真实透明": "只分享实战经验、踩坑血泪、真实收入和技术变现逻辑",
+    "技术硬核": "既懂底层代码，又懂商业落地（DeepSeek/AI Agent开发）"
+  },
+  "core_style": "长短句结合、Emoji丰富、语气平和",
+  "background": "10年全栈开发经验，3年一人企业独立开发者",
+  "active_platforms": [
+    "xiaohongshu",
+    "zhihu",
+    "wechat_public",
+    "toutiao",
+    "tieba"
+  ]
+}

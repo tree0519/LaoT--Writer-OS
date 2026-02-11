@@ -1,0 +1,32 @@
+{
+  "toutiao": {
+    "enable_images": true,
+    "style_prompt": "写实摄影风格，高对比度，新闻纪实感，4k分辨率，清晰",
+    "ratio": "16:9",
+    "count": 3
+  },
+  "wechat_public": {
+    "enable_images": true,
+    "style_prompt": "极简扁平插画，Corporate Memphis 风格，柔和的配色，氛围轻松友好，适合由于排版",
+    "ratio": "4:3",
+    "count": 4
+  },
+  "xiaohongshu": {
+    "enable_images": true,
+    "style_prompt": "ins风，生活化，高饱和度，精美构图，主要展示生活方式，适合做封面",
+    "ratio": "3:4",
+    "count": 1
+  },
+  "zhihu": {
+    "enable_images": true,
+    "style_prompt": "信息图表风格，数据可视化，极简线条，科技感，深色模式",
+    "ratio": "16:9",
+    "count": 2
+  },
+  "tieba": {
+    "enable_images": true,
+    "style_prompt": "粗糙的手机实拍质感，第一人称视角，充满生活气息，略微模糊，真实感强",
+    "ratio": "4:3",
+    "count": 1
+  }
+}

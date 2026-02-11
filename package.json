@@ -1,26 +1,20 @@
 {
-  "name": "super-article",
-  "version": "0.1.0",
-  "private": true,
+  "name": "laot-writer-os",
+  "version": "1.0.0",
+  "description": "A modular, configurable AI writing operating system that helps you clone yourself and automate the flow from 'inspiration' to 'multi-platform distribution'.",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init-profile": "node skills/setup_wizard.js",
+    "analyze-style": "node skills/analyze_style.js"
   },
-  "dependencies": {
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+  "keywords": [
+    "ai",
+    "writing",
+    "content-creation",
+    "automation",
+    "multi-platform"
+  ],
+  "author": "Old T",
+  "license": "MIT"
 }

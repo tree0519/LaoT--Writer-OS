@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 老T-Writer-OS (Content Creator OS)
 
-## Getting Started
+一个模块化、可配置的 AI 写作操作系统。它可以帮你克隆自己，建立多平台分身，实现从“灵感”到“多平台分发”的全自动化流程。
 
-First, run the development server:
+---
 
+## 核心特性
+
+- **人设克隆**: 通过 `/init-profile` 交互式向导，或 `/init-from-history` 历史文章分析，精准提取你的语气、风格和背景，定制专属 AI 分身。
+- **长记忆系统**: 系统会自动记忆你的写作风格、常用词汇和历史话题，避免内容重复，保持人设一致性。
+- **一键多平台分发**: 同样的选题，自动适配不同平台的调性：
+    - **小红书**: 情绪流，短句，大量 Emoji，视觉驱动。
+    - **知乎**: 逻辑流，深度分析，理性客观。
+    - **公众号**: 品牌流，深度与可读性兼顾，建立信任。
+    - **头条**: 流量流，标题党，强冲突，快节奏。
+    - **贴吧**: 故事流，口语化，互动性强，支持“无限盖楼”连载。
+- **自动配图**: 识别文章内容，自动插入配图指令，并支持调用生图 API 渲染出符合平台风格的图片。
+- **反 AI 味质检**: 内置 `anti_ai_check` 脚本，自动检测并标记“综上所述”、“不可否认”等 AI 常用词，确保文章自然真实。
+
+---
+
+## 快速开始 (Quick Start)
+
+### 1. 初始化 (必选)
+
+在开始写作前，你需要告诉系统“你是谁”。
+
+**方式 A: 交互式向导 (推荐)**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+/init-profile
+```
+跟随指引输入你的笔名（如：独立开发老T）、人设（如：全栈工程师）、风格关键词（如：犀利、干货）。
+
+**方式 B: 历史文章分析**
+如果你有已发布的文章，让系统自动学习你的风格：
+```bash
+/init-from-history ./my_articles/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. 创作第一篇文章
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**第一步：生成通用底稿**
+```bash
+/write-draft "为什么程序员要尽早做副业"
+```
+系统会根据你的人设，生成一篇内容扎实、观点鲜明的通用草稿。
+查看输出：`drafts/generic/YYYYMMDD_side_project.md`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**第二步：一键分发**
+```bash
+/write-article "为什么程序员要尽早做副业"
+```
+或者手动改编到特定平台：
+```bash
+/adapt-article drafts/generic/YYYYMMDD_side_project.md xiaohongshu "语气再焦虑一点"
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 详细文档
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+更多高级玩法和配置说明，请查阅 `docs/` 目录：
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **[指令手册 (Command Manual)](docs/commands.md)**: 所有指令的详细参数和用法说明。
+- **[高级配置 (Configuration)](docs/configuration.md)**: 如何自定义图片风格、修改平台模板、微调人设。
+- **[开发者指南 (Developer Guide)](docs/developer.md)**: 项目结构解析，如何添加新平台支持。
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 目录结构
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+.
+├── agents/          # (自动生成) 存放具体平台的 AI 人设配置
+├── config/          # 用户配置
+│   ├── source_persona.json  # 核心人设数据
+│   ├── platform_registry.json # 平台规则配置
+│   └── image_styles.json    # 图片风格配置
+├── docs/            # 详细文档
+├── drafts/          # 文章草稿箱 (按平台分类)
+├── memory/          # (自动生成) 风格记忆与历史记录
+├── skills/          # 核心功能脚本 (Node.js)
+├── templates/       # 平台骨架模板
+└── CLAUDE.md        # 系统核心指令集
+```
+
+## 示例展示
+
+我们为你准备了一篇由系统生成的示例文章，展示了从底稿到各平台分发的最终效果。
+👉 **[查看示例文章与分发效果](docs/example_output.md)** (请生成此文件)
+
+---
+
+**Create by 独立开发老T**

@@ -1,0 +1,11 @@
+{
+  "fixed_catchphrases": [
+    "兄弟们",
+    "听懂掌声",
+    "说白了",
+    "本质上"
+  ],
+  "target_audience": "25-35岁的一线城市程序员",
+  "tone_preference": "真诚、直接、偶尔自嘲",
+  "avoid_topics": ["政治", "宗教", "过度贩卖焦虑"]
+}

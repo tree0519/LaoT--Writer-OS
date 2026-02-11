@@ -1,0 +1,58 @@
+{
+    "xiaohongshu": {
+        "name": "小红书",
+        "description": "表情包丰富，情绪化，视觉驱动，短段落",
+        "template_file": "xiaohongshu_skeleton.md",
+        "constraints": {
+            "max_length": 500,
+            "title_max_chars": 20,
+            "forbidden_words": ["最", "第一", "绝对", "顶级", "国家级"],
+            "emoji_density": "high"
+        }
+    },
+    "zhihu": {
+        "name": "知乎",
+        "description": "专业，分析性强，逻辑严密，内卷风",
+        "template_file": "zhihu_skeleton.md",
+        "constraints": {
+            "max_length": 10000,
+            "title_max_chars": 60,
+            "structure": "Q&A",
+            "emoji_density": "low"
+        }
+    },
+    "wechat_public": {
+        "name": "微信公众号",
+        "description": "正式但引人入胜，深度导向，品牌建设",
+        "template_file": "wechat_public_skeleton.md",
+        "constraints": {
+            "max_length": 5000,
+            "title_max_chars": 60,
+            "interactive": true,
+            "emoji_density": "medium"
+        }
+    },
+    "toutiao": {
+        "name": "今日头条",
+        "description": "新闻感，耸人听闻的标题，有争议性",
+        "template_file": "toutiao_skeleton.md",
+        "constraints": {
+            "max_length": 3000,
+            "title_max_chars": 30,
+            "style_tag": "shocking",
+            "emoji_density": "low"
+        }
+    },
+    "tieba": {
+        "name": "百度贴吧",
+        "description": "非正式，大量俚语，互动性强",
+        "template_file": "tieba_skeleton.md",
+        "constraints": {
+            "max_length": 500,
+            "title_max_chars": 30,
+            "structure": "floors",
+            "emoji_density": "medium",
+            "allow_slang": true
+        }
+    }
+}
