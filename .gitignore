@@ -8,8 +8,6 @@ yarn-error.log
 Thumbs.db
 
 # Project
-drafts/
-memory/
 .claude/
 
 # Config (optional - uncomment if you want to keep your personal config private)
